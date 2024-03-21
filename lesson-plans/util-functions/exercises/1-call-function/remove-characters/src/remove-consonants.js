@@ -8,12 +8,21 @@ import { removeCharacters } from './utils/remove-characters.js';
 const removeConsonants = () => {
 	debugger;
 
-	// --- read user input ---z
+	// --- read user input ---
 	const userText = readString('user-text');
-	const notVowels = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ'
+
 	// --- remove all consonants from the input ---
 	//  use `removeCharacters` to write this step of the program
-	const noConsonants = removeCharacters(userText, notVowels);
+	const consonants = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ';
+	// let noConsonants = '';
+	// for (let i = 0; i < userText.length; i++) {
+	//   if (vowels.includes(userText[i])) {
+	//     noConsonants += userText[i];
+	//   }
+	// }
+
+
+	const noConsonants = removeCharacters(userText, consonants);
 
 	// --- display the input with no consonants ---
 	displayString('removified', noConsonants);
