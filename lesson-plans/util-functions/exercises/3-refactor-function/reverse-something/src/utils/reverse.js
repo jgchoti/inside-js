@@ -1,8 +1,10 @@
 /**
  *
  */
-export const reverse = (text) => {
-  let textArray = text.split('')
-  let reversed = textArray.reverse().join('')
-  return reversed;
+export const reverse = (text = '') => {
+  let reverseText = '';
+  for (let i = 0; i < text.length; i++) {
+    reverseText = text[i] + reverseText;
+  }
+  return reverseText;
 };
