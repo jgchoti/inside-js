@@ -20,7 +20,17 @@ const isEven = (x = 0) => {
  * @param {Function} cb - What to check for.
  * @returns {string} "neither", "one" or "both"
  */
-const checkThem = () => {};
+const checkThem = (num1 = 0, num2 = 0, cb) => {
+  let number1 = cb(num1);
+  let number2 = cb(num2);
+  if (number1 && number2) {
+    return 'both';
+  } else if (!number1 && !number2) {
+    return 'neither';
+  } else {
+    return 'one';
+  }
+};
 
 // --- test your function ---
 
