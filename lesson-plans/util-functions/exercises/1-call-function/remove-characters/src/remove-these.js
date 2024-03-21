@@ -10,12 +10,17 @@ const removeThese = () => {
 
 	// --- read user input ---
 	const userText = readString('user-text');
-	const removeThese = readString('to-remove');
-
+	let removeThese = readString('to-remove');
+	// removeThese = removeThese.split('')
+	// let noConsonants = '';
 	// remove all the user's characters from the input
 	//  use `removeCharacters` to write this step of the program
-	const noConsonants = removeCharacters(userText, removeThese);
-
+	// for (let i = 0; i < userText.length; i++) {
+	//   if (!removeThese.includes(userText[0])) {
+	//     noConsonants += userText[0];
+	//   }
+	// }
+	const noConsonants = removeCharacters(userText, removeThese)
 	// --- display the input with no consonants ---
 	displayString('removified', noConsonants);
 };
