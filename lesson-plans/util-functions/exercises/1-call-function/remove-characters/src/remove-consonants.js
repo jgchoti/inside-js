@@ -8,7 +8,7 @@ import { removeCharacters } from './utils/remove-characters.js';
 const removeConsonants = () => {
 	debugger;
 
-	// --- read user input ---
+	// --- read user input ---z
 	const userText = readString('user-text');
 
 	// --- remove all consonants from the input ---
