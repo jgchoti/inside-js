@@ -14,7 +14,11 @@
  * @example
  * addANumber([-2, -1, 0, 1], 1); // [-1, 0, 1, 2]
  */
-const addANumber = () => {};
+const addANumber = (numbers = [], addMe = 0) => {
+  let newArray = numbers.slice();
+  let resultArray = newArray.map((x) => x + addMe);
+  return resultArray;
+};
 
 describe('addANumber: adds a given number to each number in an array', () => {
   describe('the function adds to each entry:', () => {
@@ -58,10 +62,16 @@ describe('addANumber: adds a given number to each number in an array', () => {
   });
   describe('there are no side-effects', () => {
     it('returns a new array', () => {
-      writeThisTest;
+      // test for reference inequality (did the function return a new array?)
+      const argument = ['a', 'b', 'c', 'd'];
+      const returned = addANumber(argument);
+      expect(argument === returned).toEqual(false);
     });
     it('does not modify the original array', () => {
-      writeThisTest;
+      // test for side-effects (was the argument's reference modified?)
+      const argument = ['a', 'b', 'c', 'd'];
+      addANumber(argument);
+      expect(argument).toEqual(['a', 'b', 'c', 'd']);
     });
   });
 });
