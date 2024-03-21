@@ -21,11 +21,11 @@ const isEven = (x = 0) => {
  * @returns {string} "neither", "one" or "both"
  */
 const checkThem = (num1 = 0, num2 = 0, cb) => {
-  let number1 = cb(num1);
-  let number2 = cb(num2);
-  if (number1 && number2) {
+  let checkNum1 = cb(num1);
+  let checkNum2 = cb(num2);
+  if (checkNum1 === true && checkNum2 === true) {
     return 'both';
-  } else if (!number1 && !number2) {
+  } else if (checkNum1 !== true && checkNum2 !== true) {
     return 'neither';
   } else {
     return 'one';
@@ -41,7 +41,7 @@ const check2 = checkThem(6, 5, isGreaterThanFive);
 console.assert(check2 === 'one', 'Test 2');
 
 const check3 = checkThem(1, 2, isGreaterThanFive);
-console.assert(check3 === 'both', 'Test 3');
+console.assert(check3 === 'neither', 'Test 3');
 
 const check4 = checkThem(1, 5, isEven);
 console.assert(check4 === 'neither', 'Test 4');
