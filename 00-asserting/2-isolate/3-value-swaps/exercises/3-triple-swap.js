@@ -12,6 +12,10 @@ let c = 'y';
 let temp;
 
 // --- swap values ---
+temp = b
+b = c
+c = a
+a = temp
 
 // --- test final values ---
 
@@ -24,7 +28,7 @@ console.assert(test2, 'Test 2');
 const test3 = c === 'z';
 console.assert(test3, 'Test 3');
 
-const test4 = temp === _;
+const test4 = temp === 'x';
 console.assert(test4, 'Test 4');
 
 console.log('-- end --');

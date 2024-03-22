@@ -11,7 +11,7 @@ console.log('-- begin --');
 // fill in the blanks to pass the assertions
 // there may be more than one correct answer!
 
-const _1_expect = _; // __
+const _1_expect = true; // __
 const _1_native = '1' <= 1;
 console.assert(_1_expect === _1_native, 'Test 1');
 
