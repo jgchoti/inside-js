@@ -5,4 +5,7 @@
  * @param {Array} arr - the array of items to coerce
  * @returns {Array} - a new array of number values
  */
-export const keepNumbery = (arr = []) => {};
+export const keepNumbery = (arr = []) => {
+  let result = arr.filter(x => !isNaN(x)).map(y => Number(y))
+  return result
+};

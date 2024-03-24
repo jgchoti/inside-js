@@ -26,8 +26,8 @@ console.log('-- begin --');
 */
 
 // try different values to see what happens
-let a = _;
-let b = _;
+let a = 5;
+let b = 6;
 
 const realPlus = a + b;
 

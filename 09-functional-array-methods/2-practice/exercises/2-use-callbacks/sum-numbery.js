@@ -23,10 +23,12 @@ export const sumNumbery = (arr) => {
   };
 
   // fill in the array method names and callbacks
-  const areAllStrings = arr._(_); // a boolean value
+
+  // properly check if all elements in the array are strings
+  const areAllStrings = arr.every(isString); // a boolean value
   if (!areAllStrings) {
-    return _;
+    return 0;
   }
 
-  return arr._(_)._(_)._(_, _);
+  return arr.filter(isNotNaN).map(castToNumber).reduce(sumNumbers, '');
 };

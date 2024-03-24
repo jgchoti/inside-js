@@ -10,10 +10,13 @@ const deepCompare = (actual, expect) => actual === expect || Object.is(actual, e
 /**
  * Reverses an array without modifying the parameter.
  *
- * @param {number[]} [arr=[]] - __
- * @returns {number[]} __
+ * @param {number[]} [arr=[]] - The array to be reversed.
+ * @returns {number[]} - The reversed array.
  */
-const reverseArray = () => {};
+const reverseArray = (arr = []) => {
+	let reverseArray = [...arr]
+	return reverseArray.reverse()
+};
 
 const _1_arg = [1, 2, 3];
 const _1_returned = reverseArray(_1_arg);
