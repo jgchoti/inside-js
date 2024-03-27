@@ -18,7 +18,13 @@
  * @param {string} str - The string to reverse.
  * @returns {string} The input string, but backwards.
  */
-const reverseString = (str) => {};
+const reverseString = (str) => {
+  let reverseString = '';
+  for (const chars of str) {
+    reverseString = chars + reverseString;
+  }
+  return reverseString;
+};
 
 describe('reverseString: reverses any string', () => {
   it('reverses an empty string', () => {

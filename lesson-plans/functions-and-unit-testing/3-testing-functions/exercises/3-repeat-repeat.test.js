@@ -8,15 +8,22 @@
  * @returns {string} The string with repeated characters, repeated.
  */
 const repeatRepeat = (text, repeats) => {
+  // let result = '';
+  // for (const chars of text) {
+  //   result += chars.repeat(repeats);
+  // }
+  // return result.repeat(repeats);
   let result = '';
-  if (repeats <= 0) {
-    return result;
-  } else {
-    for (const chars of text) {
-      result += chars.repeat(repeats);
+  for (let j = 0; j < text.length; j++) {
+    for (let i = repeats - 1; i >= 0; i--) {
+      result += text[j];
     }
-    return result.repeat(repeats);
   }
+  let finalresult = '';
+  for (let k = 0; k < repeats; k++) {
+    finalresult += result;
+  }
+  return finalresult;
 };
 
 describe('repeatRepeat: repeats each character and the whole string', () => {

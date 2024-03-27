@@ -8,11 +8,12 @@
  * @returns {string} The repeated string.
  */
 const repeatString = (text, repeats) => {
-  if (repeats <= 0) {
-    return '';
-  } else {
-    return text.repeat(repeats);
+  // return text.repeat(repeats);
+  let result = '';
+  for (let i = repeats - 1; i >= 0; i--) {
+    result += text;
   }
+  return result;
 };
 
 describe('repeatString: repeats a string a specific number of times', () => {
